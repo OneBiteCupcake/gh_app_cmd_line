@@ -8,7 +8,7 @@ async def main():
     async with aiohttp.ClientSession() as session:
         gh = GitHubAPI(session, "Bret", oauth_token=os.getenv("GH_AUTH"))
 
-        response = await gh.post('/repos/bretbailey1120/racquetballReferee/issues',
+        response = await gh.post('/repos/bretbailey1120/gh_app_cmd_line/issues',
                       data={
                           'title': 'we got a problem',
                           'body': 'user more emoji!'
